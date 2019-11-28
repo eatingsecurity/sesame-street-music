@@ -1,0 +1,56 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sesame Street YouTube Music Search</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    </head>
+  <body>
+    <header>
+      <p>
+        <a href="https://www.sesamestreet.org/" target="_blank"><img class="center" src="https://cdn.glitch.com/9fe1e983-96da-4512-a243-caf51c8a525f%2FSesame50_Logo.png" alt="Sesame Street's 50th Anniversary"></a>
+      </p>
+      <h1>
+        Sesame Street Music Search 
+      </h1>
+    </header>
+
+    <main>
+
+      <p>This app will Search Sesame Street's YouTube channel for music and songs. Sesame Street has had some incredible musical guests over the past 50 years, including Johnny Cash, Destiny's Child, Yo Yo Ma, Smokey Robinson, Paul Simon (with an amazing accompaniment), Stevie Wonder, and more. Partially inspired by the Twitter hashtag <a href="https://twitter.com/hashtag/sesame50" target="_blank" alt="Hashtag Sesame50 on Twitter" target="_blank">#Sesame50</a> and <a href="https://twitter.com/eatingsecurity/status/1133954383652229121" target="_blank">this thread</a>.</p>
+      <p>My API quota is at the "free" level, so the daily quota is fairly easy to hit. The <a href="https://glitch.com/edit/#!/sesame-street-music?path=README.md:1:0" target="_blank">README</a> has information if you want to know how the project works or remix it.</p>
+
+      
+      <form method="post" action="/search" autocomplete="">
+        <input name="searchValue" type="text" maxlength="100" placeholder="<%= searchValue %>" aria-labelledby="submit">
+        <button type="submit" id="submit">Submit</button>
+      </form>
+      
+      <!-- declare variables and include views/search.ejs -->
+      <% var videos %>
+      <% var searchValue %>
+      <% include search %>
+      
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+    
+  </body>
+</html>
