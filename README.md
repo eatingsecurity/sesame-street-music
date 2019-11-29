@@ -13,7 +13,7 @@ Find out more [about Glitch](https://glitch.com/about).
 Project details
 ------------
 
-Query results are returned from `server.js` and passed to `search.ejs` for inclusion in the index page. This project uses embedded Javascript templates,`ejs`. See <https://ejs.co/> for more informaiton. 
+Query results are returned from `server.js` and passed to `search.ejs` for inclusion in the index page. This project uses embedded Javascript templates,`ejs`. See <https://ejs.co/> for more information. 
 
 On the front-end,
 - `public/style.css`
