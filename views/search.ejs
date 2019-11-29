@@ -1,6 +1,12 @@
 <!-- views/search.ejs -->
 
 <!-- Print the results from our YouTube API search. Title and YouTube 'watch' URL with our vidid. -->
+<% if (typeof searchValue !== 'undefined') { %>
+  <p>
+    Search results for <b><%= searchValue %></b>.
+  </p>
+  <%}
+%>
 
 <% for (var i in videos){ %>
 <h2>
